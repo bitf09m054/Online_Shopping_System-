@@ -1,0 +1,76 @@
+﻿@model List<TermProject.Models.Admin>
+
+
+@{
+    
+    
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+
+
+} 
+
+
+@Scripts.Render("~/bundles/jquery")
+    <script>
+        
+        $(document).ready(function () {
+
+            //$('#checking').hide();
+
+            $('#b1').click(function () {
+               
+                var userName = $('#UserName').val();
+
+                //alert('User Name ='+ userName);
+                //$('#checking').show();
+                $.getJSON("/login/CheckUserName?UserName=" + userName, function (data)
+                {
+                    //$('#checking').hide();
+                    if (data) {
+                        $('#result').text("User already exists in database");
+                        
+                    }
+                    else {
+                        $('#result').text("User not exit.");
+                    }
+                });
+
+            });
+
+        });
+    </script>
+<div id="checking">Checking...</div>
+<div class="content">
+<div class="container">
+        <div class="page-header">
+          <h1>Signup to craete your Account</h1>
+        </div>
+    <div class="row">
+     <div class="span6 offset3">
+     <h4 class="widget-header"> About you</h4>
+      <div  class="widget-body">
+        <div class="center-align">
+       <div class="form-horizontal form-signin-signup">
+      <input type="text" name="UserName" id="UserName"  placeholder="Your Name">
+    <input type="submit" id="b1"  value="check"    class="btn btn-large bottom-space" />
+<input type="text" name="email"   placeholder="Your Email">
+<input type="text" name="cell"   placeholder="Your Phone Number">
+ <input type="password" name="password"   placeholder="Your password">
+  <div id="result"></div>
+           <br><br>
+                  
+   <input type="submit" value="Submit" class="btn btn-primary btn-large">
+        
+             </div> 
+                   
+    </div>
+                  
+               
+                
+                 
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

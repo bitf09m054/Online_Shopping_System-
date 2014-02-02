@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+ 
+<div class="content">
+      <div class="container">
+        <div class="page-header">
+          <h1>Login</h1>
+        </div>
+          
+        <div class="row">
+     <div class="span6 offset3">
+     <h4 class="widget-header"> Please Login to your account</h4>
+        <div class="widget-body">
+                
+   <div class="center-align">
+
+  @using (Html.BeginForm()) {
+  <div class="form-horizontal form-signin-signup">
+  <input type="text" name="username" id="Name" placeholder="Username">
+  <input type="password" name="password" id="price"  placeholder="password">
+           <div class="remember-me">
+                    
+    </div>          
+ <br>
+                  
+   <input type="submit" value="Login" class="btn btn-primary btn-large">
+     
+          
+             </div> 
+                    }
+    </div>
+                  
+               
+                
+                 
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

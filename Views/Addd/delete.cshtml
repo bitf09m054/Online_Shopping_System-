@@ -1,0 +1,42 @@
+﻿@model TermProject.Models.factory
+@{
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+      <!-- Start: MAIN CONTENT -->
+    <div class="content">
+      <div class="container">
+        <div class="page-header">
+          <h1>Deletion</h1>
+<div class="row">
+     <div class="span6 offset3">
+     <h4 class="widget-header"> Are you sure you want to delete this item</h4>
+        <div class="widget-body">
+                
+   <div class="center-align">
+
+
+   <div class="form-horizontal form-signin-signup">
+Name Of Item :@Model.item_name <br>
+Price : @Model.price<br>
+Category : @Model.Item_category <br><br>
+@using (Html.BeginForm()) {
+<input type="submit" value="delete" class="btn btn-primary btn-large">}
+<a href="~/Addd/view_data"><input type="submit" value="Back" class="btn btn-large bottom-space"></a>
+          
+             </div> 
+                    
+    </div>
+                  
+               
+                
+                 
+                
+              </div>
+            </div>
+
+
+   </div>
+      </div>
+    </div>
+      
